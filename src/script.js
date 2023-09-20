@@ -47,19 +47,19 @@ function pauseSong() {
 
 // Previous song
 function prevSong() {
-    songIndex--;
+    songIndex--; 
 
     if (songIndex < 0) {
-    songIndex = songs.length - 1;
+    songIndex = songs.length - 1; 
 }
 
-loadSong(songs[songIndex]);
+loadSong(songs[songIndex]); //
 
 playSong();
 }
 
 // Next song
-function nextSong() {
+function nextSong() { 
     songIndex++;
 
     if (songIndex > songs.length - 1) {
@@ -72,7 +72,7 @@ function nextSong() {
 }
 
 // Update progress bar
-function updateProgress(e) {
+function updateProgress(e) { 
     const { duration, currentTime } = e.srcElement;
     const progressPercent = (currentTime / duration) * 100;
     progress.style.width = `${progressPercent}%`;
